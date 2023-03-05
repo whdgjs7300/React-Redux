@@ -2,13 +2,15 @@ import logo from './logo.svg';
 import './App.css';
 import Subscribers from './components/Subscribers';
 import {Provider} from 'react-redux';
-import store1 from './redux/store1';
+import store from './redux/store';
+import Display from './components/Display';
 
 function App() {
   return (
-    <Provider store1={store1}>
+    <Provider store={store}>
       <div className="App">
       <Subscribers/>
+      <Display/>
     </div>
 
     </Provider>
