@@ -1,5 +1,5 @@
 
-const subscribers = (props) => {
+const Subscribers = (props) => {
     
     return ( 
         <div className="items">
@@ -9,4 +9,4 @@ const subscribers = (props) => {
     );
 }
 
-export default subscribers;
+export default Subscribers;
