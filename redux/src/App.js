@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import Store from './store';
+import Subscribers from './components/Subscribers';
 
 function App() {
   return (
     <div className="App">
-      
+      <Subscribers/>
     </div>
   );
 }
