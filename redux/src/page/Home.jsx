@@ -14,7 +14,7 @@ const Home = () => {
     return ( 
         <div>
             <h1>To Do</h1>
-            <form action="" onSubmit={onsubmit}>
+            <form action="" onSubmit={onSubmit}>
                 <input type="text"  value={text} onChange={onChange}/>
                 <button>ADD</button>
             </form>
