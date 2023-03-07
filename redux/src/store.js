@@ -1,31 +1,19 @@
 import { createStore } from "redux";
+import {createAction} from '@reduxjs/toolkit';
 
-const ADD = "ADD";
-const DELETE = "DELETE";
-
-export const addToDo = (text) => {
-    return {
-        type : ADD,
-        text
-    }
-}
-
-export const deleteToDo = (id) => {
-    return {
-        type : DELETE,
-        id
-    }
-}
+// 리덕스 툴킷에서 액션타입 정의
+const addToDo = createAction("ADD")
+const deleteToDo = createAction("DELETE");
 
 
 const reducer = (state= [], action) => {
     switch(action.type) {
-        case ADD: 
+        case addToDo: 
         return [{
             text : action.text,
             id : Date.now() 
         }, ...state];
-        case DELETE : 
+        case deleteToDo : 
         return state.filter(toDo => toDo !== action.id);
         default:
             return state;
@@ -33,5 +21,7 @@ const reducer = (state= [], action) => {
 }
 
 const store = createStore(reducer);
+
+store.subscribe()
 
 export default store;
